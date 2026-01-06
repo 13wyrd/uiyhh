@@ -77,8 +77,8 @@ export function LandingPage() {
         </div>
 
         {/* Main content - NO motion animations */}
-        <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-8">
-          <div className="max-w-2xl w-full flex flex-col items-center text-center space-y-8">
+        <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-8 -mt-12">
+          <div className="max-w-2xl w-full flex flex-col items-center text-center space-y-6">
             {/* Avatar section - Simple CSS animation only */}
             <div className="relative animate-subtle-pulse">
               <img
@@ -108,8 +108,8 @@ export function LandingPage() {
               onClick={handleCTAClick}
               className="relative px-8 py-4 rounded-full text-lg font-semibold overflow-hidden active:scale-95 transition-transform"
             >
-              {/* Static gradient background */}
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-600 via-red-600 to-purple-600" />
+              {/* Animated gradient background with pulse */}
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-600 via-red-600 to-purple-600 animate-pulse" />
               
               {/* Button content */}
               <span className="relative z-10 text-white drop-shadow-lg">
