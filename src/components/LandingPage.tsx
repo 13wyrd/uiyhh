@@ -32,15 +32,24 @@ export function LandingPage() {
         {/* Static gradient glow */}
         <div className="absolute inset-0 pointer-events-none">
           <div
-            className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full opacity-25"
+            className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-30"
             style={{
-              background: 'radial-gradient(circle, rgba(236,72,153,0.6) 0%, rgba(220,38,127,0.4) 40%, rgba(255,20,147,0.3) 60%, transparent 80%)',
+              background: 'radial-gradient(circle, rgba(236,72,153,0.8) 0%, rgba(220,38,127,0.5) 40%, rgba(255,20,147,0.4) 60%, transparent 80%)',
+              filter: 'blur(100px)',
             }}
           />
           <div
-            className="absolute top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full opacity-20"
+            className="absolute top-2/3 left-1/4 w-[500px] h-[500px] rounded-full opacity-25"
             style={{
-              background: 'radial-gradient(circle, rgba(168,85,247,0.5) 0%, rgba(236,72,153,0.3) 50%, transparent 80%)',
+              background: 'radial-gradient(circle, rgba(168,85,247,0.6) 0%, rgba(236,72,153,0.4) 50%, transparent 80%)',
+              filter: 'blur(80px)',
+            }}
+          />
+          <div
+            className="absolute top-1/2 right-1/4 w-[400px] h-[400px] rounded-full opacity-20"
+            style={{
+              background: 'radial-gradient(circle, rgba(220,38,127,0.5) 0%, rgba(168,85,247,0.3) 50%, transparent 80%)',
+              filter: 'blur(90px)',
             }}
           />
         </div>
@@ -50,17 +59,21 @@ export function LandingPage() {
           <div className="max-w-lg w-full flex flex-col items-center text-center space-y-4">
             
             {/* Avatar */}
-            <div className="relative mb-2 animate-subtle-pulse">
-              <img
-                src={avatarGif}
-                alt="Avatar"
-                className="w-64 h-auto rounded-2xl shadow-2xl"
-                loading="eager"
-              />
+            <div className="relative mb-6 animate-subtle-pulse">
+              <div className="absolute -inset-4 bg-gradient-to-br from-pink-500/40 via-purple-500/40 to-pink-500/40 rounded-[2rem] blur-2xl"></div>
+              <div className="relative overflow-hidden rounded-[2rem] shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-pink-500/10 to-purple-500/10"></div>
+                <img
+                  src={avatarGif}
+                  alt="Avatar"
+                  className="relative w-72 h-auto rounded-[2rem]"
+                  loading="eager"
+                />
+              </div>
             </div>
 
             {/* Очень понятный заголовок */}
-            <div className="space-y-2 mb-4 px-4">
+            <div className="space-y-2 mb-4 px-4 mt-4">
               <h1 className="text-xl font-bold text-white leading-tight">
                 NEW VIDEO JUST DROPPED 🔥
               </h1>
@@ -171,9 +184,23 @@ export function LandingPage() {
       {/* Radial gradient glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full opacity-30"
+          className="absolute top-1/3 left-1/3 w-[1000px] h-[1000px] rounded-full opacity-35"
           style={{
-            background: 'radial-gradient(circle, rgba(220,38,127,0.4) 0%, rgba(255,20,147,0.2) 30%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(236,72,153,0.6) 0%, rgba(220,38,127,0.4) 30%, transparent 70%)',
+            filter: 'blur(100px)',
+          }}
+        />
+        <div
+          className="absolute top-1/2 right-1/4 w-[800px] h-[800px] rounded-full opacity-25"
+          style={{
+            background: 'radial-gradient(circle, rgba(168,85,247,0.5) 0%, rgba(236,72,153,0.3) 40%, transparent 70%)',
+            filter: 'blur(90px)',
+          }}
+        />
+        <div
+          className="absolute bottom-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full opacity-20"
+          style={{
+            background: 'radial-gradient(circle, rgba(220,38,127,0.4) 0%, rgba(168,85,247,0.3) 50%, transparent 80%)',
             filter: 'blur(80px)',
           }}
         />
@@ -185,22 +212,35 @@ export function LandingPage() {
           
           {/* Avatar section */}
           <motion.div
-            className="relative mb-4"
+            className="relative mb-8"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
-            <img
-              src={avatarGif}
-              alt="Avatar"
-              className="w-96 md:w-[480px] h-auto rounded-3xl shadow-2xl"
-              loading="eager"
-            />
+            <div className="absolute -inset-10 bg-gradient-to-br from-pink-500/60 via-purple-500/60 to-pink-500/60 rounded-[4rem] blur-[60px]"></div>
+            <div className="relative w-[400px] md:w-[520px] h-[500px] md:h-[650px] overflow-hidden rounded-[4rem] shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-b from-pink-500/20 via-transparent to-purple-500/20"></div>
+              <motion.img
+                src={avatarGif}
+                alt="Avatar"
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="eager"
+                animate={{ 
+                  scale: [1, 1.02, 1],
+                }}
+                transition={{ 
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-pink-500/10 via-transparent to-purple-500/10"></div>
+            </div>
           </motion.div>
 
           {/* Заголовок */}
           <motion.div
-            className="space-y-3"
+            className="space-y-3 mt-4"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3 }}
