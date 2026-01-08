@@ -113,13 +113,6 @@ export function LandingPage() {
           </div>
         </div>
 
-        {/* Footer */}
-        <footer className="absolute bottom-0 left-0 right-0 py-4 text-center border-t border-white/5">
-          <p className="text-xs text-gray-500">
-            🔞 18+ content • Private
-          </p>
-        </footer>
-
         {/* CSS анимации */}
         <style>{`
           @keyframes subtle-pulse {
@@ -348,18 +341,6 @@ export function LandingPage() {
 
         </div>
       </div>
-
-      {/* Footer */}
-      <motion.footer
-        className="absolute bottom-0 left-0 right-0 py-6 text-center border-t border-white/5"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
-      >
-        <p className="text-sm text-gray-500">
-          🔞 18+ content • Private • Secure
-        </p>
-      </motion.footer>
     </div>
   );
 }

@@ -67,15 +67,12 @@
     --color-pink-500: oklch(.656 .241 354.308);
     --color-pink-600: oklch(.592 .249 .584);
     --color-gray-300: oklch(.872 .01 258.338);
-    --color-gray-500: oklch(.551 .027 264.364);
     --color-white: #fff;
     --spacing: .25rem;
     --container-xs: 20rem;
     --container-md: 28rem;
     --container-lg: 32rem;
     --container-3xl: 48rem;
-    --text-xs: .75rem;
-    --text-xs--line-height: calc(1 / .75);
     --text-sm: .875rem;
     --text-sm--line-height: calc(1.25 / .875);
     --text-base: 1rem;
@@ -446,18 +443,6 @@
     top: 66.6667%;
   }
 
-  .right-0 {
-    right: calc(var(--spacing) * 0);
-  }
-
-  .bottom-0 {
-    bottom: calc(var(--spacing) * 0);
-  }
-
-  .left-0 {
-    left: calc(var(--spacing) * 0);
-  }
-
   .left-1\/2 {
     left: 50%;
   }
@@ -659,11 +644,6 @@
     border-width: 4px;
   }
 
-  .border-t {
-    border-top-style: var(--tw-border-style);
-    border-top-width: 1px;
-  }
-
   .border-pink-500\/30 {
     border-color: color-mix(in srgb, oklch(.656 .241 354.308) 30%, transparent);
   }
@@ -676,16 +656,6 @@
 
   .border-purple-300 {
     border-color: var(--color-purple-300);
-  }
-
-  .border-white\/5 {
-    border-color: #ffffff0d;
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .border-white\/5 {
-      border-color: color-mix(in oklab, var(--color-white) 5%, transparent);
-    }
   }
 
   .bg-\[\#0a0a0a\] {
@@ -751,10 +721,6 @@
     padding-block: calc(var(--spacing) * 5);
   }
 
-  .py-6 {
-    padding-block: calc(var(--spacing) * 6);
-  }
-
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
   }
@@ -806,11 +772,6 @@
     line-height: var(--tw-leading, var(--text-xl--line-height));
   }
 
-  .text-xs {
-    font-size: var(--text-xs);
-    line-height: var(--tw-leading, var(--text-xs--line-height));
-  }
-
   .leading-tight {
     --tw-leading: var(--leading-tight);
     line-height: var(--leading-tight);
@@ -833,10 +794,6 @@
 
   .text-gray-300 {
     color: var(--color-gray-300);
-  }
-
-  .text-gray-500 {
-    color: var(--color-gray-500);
   }
 
   .text-pink-300 {
