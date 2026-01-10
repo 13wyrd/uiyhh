@@ -1,6 +1,6 @@
 
   {
-      "name": "One-Page Landing Page Design",
+      "name": "Mobile Landing Page Design",
       "version": "0.1.0",
       "private": true,
       "dependencies": {
@@ -36,7 +36,6 @@
           "embla-carousel-react": "^8.6.0",
           "input-otp": "^1.4.2",
           "lucide-react": "^0.487.0",
-          "motion": "*",
           "next-themes": "^0.4.6",
           "react": "^18.3.1",
           "react-day-picker": "^8.10.1",
